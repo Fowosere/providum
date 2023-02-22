@@ -22114,7 +22114,7 @@ iframe.yt-video.loaded {
 
 
 .grow img{
-  transition: 0.5 ease;
+  transition: 1.0 ease;
   }
   
   .grow img:hover{
