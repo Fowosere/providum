@@ -37,46 +37,14 @@
   <link href="assets/css/user.css" rel="stylesheet" />
 
   <style>
-    /* DEMO-SPECIFIC STYLES */
-    .typewriter {
-      color: #fff;
-      font-family: monospace;
-      overflow: hidden;
-      /* Ensures the content is not revealed until the animation */
-      border-right: .15em solid orange;
-      /* The typwriter cursor */
-      white-space: nowrap;
-      /* Keeps the content on a single line */
-      margin: 0 auto;
-      /* Gives that scrolling effect as the typing happens */
-      letter-spacing: .15em;
-      /* Adjust as needed */
-      animation:
-        typing 5.5s steps(50, end),
-        blink-caret .10s step-end infinite;
+    span {
+      border-right: .05em solid;
+      animation: caret 1s steps(1) infinite;
     }
 
-    /* The typing effect */
-    @keyframes typing {
-      from {
-        width: 0
-      }
-
-      to {
-        width: 100%
-      }
-    }
-
-    /* The typewriter cursor effect */
-    @keyframes blink-caret {
-
-      from,
-      to {
-        border-color: transparent
-      }
-
+    @keyframes caret {
       50% {
-        border-color: orange
+        border-color: transparent;
       }
     }
   </style>
@@ -206,11 +174,13 @@
             <h1 class="p-3 fs-xxl-3 fs-xxl-5" data-zanim-xs='{"delay":0.3}' data-zanim-trigger="scroll">Strengthening
               African enterprise by simplifying financing and logistics.</h1>
             <p class="text-black typewriter" data-zanim-xs='{"delay":0.5}' data-zanim-trigger="scroll"
-              style="background-color: aliceblue;width: 100%;padding: 10px;">PO from reputable buyer > Submit
-              Funding Request > PO confirmation Process > Contracting > Financing. </p>
+              style="background-color: aliceblue;width: 100%;padding: 10px; box-sizing: content-box; border-width: 0px;border-radius: 10px;">
+            </p>
             <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-center mt-5"
               data-zanim-xs='{"delay":0.5}' data-zanim-trigger="scroll">
-              <a class="btn  btn-primary me-1" href="#!" role="button">Get Intouch</a>
+              <a class="btn  btn-primary me-1" role="button"
+                href="https://docs.google.com/forms/d/1neG7rWgL-xdVi9ZBpGgOFhcdO0t15IMScI6HzYhGJoQ" target="_blank">Get
+                Intouch</a>
             </div>
           </div>
         </div>
@@ -420,7 +390,7 @@
 
     <!-- ============================================-->
     <!-- <section> begin ============================-->
-    <section id="product">
+    <!-- <section id="product">
 
       <div class="container">
         <div class="row mb-2">
@@ -451,6 +421,79 @@
 
 
         </div>
+
+      </div>
+
+
+    </section> -->
+
+
+    <section id="product">
+
+      <div class="container">
+        <div class="row mb-2">
+          <div class="col-md-6 h-100 text-center text-md-start  p-5 p-md-5 pb-3">
+            <h2 class="mt-3">Shipping & Logistics </h2>
+            <p class="mb-0">Exceeding expectation in project
+              deliverables require a well-planned supply
+              chain operation.
+              Find out how our innovative services are
+              meeting industry-specific needs.
+            </p>
+
+            <br>
+            <br>
+            <a class="btn btn-sm my-2 btn-default" href="logistics.html" role="button" style="float: right;">Read More<i
+                class="fas fa-arrow-right ms-2"></i></a>
+          </div>
+          <div class="col-md-6">
+            <div class="w-100 h-100 p-5 services-card-shadow bg-white rounded-4 grow"><img
+                src="assets/img/icons/international.png" alt="Dashboard" style="width:95px;" />
+              <h3 class="mt-3 lh-base">Global Network Operations.&quot;</h3>
+              <p class="mb-0">We are breaking boundaries and known
+                industry limitation through a network of
+                top supply chain companies across many
+                continents.
+                Logistic is not a one-man show, our
+                strength is determined by our network
+                of partners across the globe. 
+                 </p>
+
+            </div>
+          </div>
+
+        </div>
+        <div class="row mb-4">
+          <div class="col-md-6 mt-1">
+            <div class="w-100 h-100 p-5 services-card-shadow bg-white rounded-4 grow"><img
+                src="assets/img/icons/project-management.png" alt="Comment" style="width:95px;" />
+              <h3 class="mt-3 lh-base">Experience is key</h3>
+              <p class="mb-0">PROVIDUM logistic specialists can help
+                your organization design, plan and
+                manage end-end project deliverables. 
+
+              </p>
+
+            </div>
+          </div>
+          <div class="col-md-6 mt-1">
+            <div class="w-100 h-100 p-5 services-card-shadow bg-white rounded-4 grow"><img
+                src="assets/img/icons/competition.png" alt="Tailored" style="width:95px;" />
+              <h3 class="mt-3 lh-base">Putting you ahead of competition.  </h3>
+              <p class="mb-0">The difference between a successful and
+                profitable project could be a question of
+                effective logistic planning.
+                From OEM warehouse to project sites,
+                we have the experience to put you
+                ahead.
+                count.
+              </p>
+
+            </div>
+          </div>
+        </div>
+
+
 
       </div>
       <!-- end of .container-->
@@ -933,6 +976,52 @@
 
     }
 
+
+
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function (event) {
+      // array with texts to type in typewriter
+      var dataText = ["IT Sourcing & Procurement .", "Project Financing .", "Shipping & Logistics .", "IT Sourcing & Procurement .", "Project Financing .", "Shipping & Logistics .", "IT Sourcing & Procurement .", "Project Financing .", "Shipping & Logistics ."];
+
+      // type one text in the typwriter
+      // keeps calling itself until the text is finished
+      function typeWriter(text, i, fnCallback) {
+        // chekc if text isn't finished yet
+        if (i < (text.length)) {
+          // add next character to h1
+          document.querySelector(".typewriter").innerHTML = text.substring(0, i + 1) + '<span aria-hidden="true"></span>';
+
+          // wait for a while and call this function again for next character
+          setTimeout(function () {
+            typeWriter(text, i + 1, fnCallback)
+          }, 100);
+        }
+        // text finished, call callback if there is a callback function
+        else if (typeof fnCallback == 'function') {
+          // call callback after timeout
+          setTimeout(fnCallback, 700);
+        }
+      }
+      // start a typewriter animation for a text in the dataText array
+      function StartTextAnimation(i) {
+        if (typeof dataText[i] == 'undefined') {
+          setTimeout(function () {
+            StartTextAnimation(0);
+          }, 20000);
+        }
+        // check if dataText[i] exists
+        if (i < dataText[i].length) {
+          // text exists! start typewriter animation
+          typeWriter(dataText[i], 0, function () {
+            // after callback (and whole text has been animated), start next text
+            StartTextAnimation(i + 1);
+          });
+        }
+      }
+      // start the text animation
+      StartTextAnimation(0);
+    });
 
 
   </script>
