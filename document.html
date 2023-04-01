@@ -30,6 +30,7 @@
     <!-- ===============================================-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="assets/css/mini-faq.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500;600;700&amp;family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300&amp;display=swap"
         rel="stylesheet">
@@ -307,42 +308,57 @@
 
         <!-- ============================================-->
         <!-- <section> begin ============================-->
-        <section>
+            <section>
 
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-6 mb-4"><img class="w-100" src="assets/img/illustration/Questions-pana.png"
-                            alt="..." /></div>
-                    <div class="col-md-6 text-center text-md-start">
-                        <h4 class="fs-3 fw-normal" data-zanim-xs='{"delay":0.3}' data-zanim-trigger="scroll">FREQUENTLY
-                            ASKED
-                            QUESTIONS
-                        </h4>
-                        <p class="fs-0 pe-xl-7" data-zanim-xs='{"delay":0.5}' data-zanim-trigger="scroll">Opportunity is
-                            everything.
-                            Get out there and find it with Uber.</p>
-                        <div class="d-flex justify-content-center align-item-center my-3 mt-2">
-                            <div>
-                                <h4 class="fw-normal fs-1">Route</h4>
-                                <p class="my-1 fs-0 pe-xl-8">Route among the safe roads. Find what's waiting for you.
-                                </p>
-                            </div>
-                            <div>
-                                <h4 class="fw-normal fs-1">Share</h4>
-                                <p class="my-1 fs-0 pe-xl-8">Your caring gets it's way. Let your people know.</p>
-                            </div>
-                        </div>
-                        <a class="btn btn-sm btn-primary btn-bg-purple my-4 me-2 justify-content-sm-start"
-              href="https://docs.google.com/forms/d/1neG7rWgL-xdVi9ZBpGgOFhcdO0t15IMScI6HzYhGJoQ" target="_blank"
-              role="button"> Get started</a><a class="btn btn-sm my-2 btn-default" href="#" role="button">Questions?
-                            Talk to our
-                            team<i class="fas fa-arrow-right ms-2"></i></a>
+                <div class="container">
+                  <div class="row align-items-center">
+                    <div class="col-md-6 mb-4"><img class="w-100" src="assets/img/illustration/Questions-pana.png" alt="..." />
                     </div>
+                    <div class="col-md-6 text-center text-md-start">
+                      <h4 class="fs-3 fw-normal" data-zanim-xs='{"delay":0.3}' data-zanim-trigger="scroll">FREQUENTLY ASKED
+                        QUESTIONS
+                      </h4>
+                   
+                        <button class="accordion">What is
+                          Providum?</button>
+                        <div class="panel">
+                          <p>Providum is a company that offers a range of services including sourcing and procurement,
+                            project financing andlogistics. We help businesses and organizations streamline their
+                            projects operations and improve their bottom line.</p>
+                        </div>
+                        
+                        <button class="accordion">What are the
+                          benefits of working with Providum?</button>
+                        <div class="panel">
+                          <p>Working with Providum offers a number of benefits, including cost savings, improved
+                            efficiency, and greater flexibility on project deliverable. Our team of experts has
+                            years of experience in project across multiple sectors in Nigeria and can help you
+                            achieve your project goals more effectively and efficiently</p>
+                        </div>
+                        <button class="accordion">How can
+                          Providum help with project financing?</button>
+                        <div class="panel">
+                          <p>If the payment terms with clients are stressing your business, Providum can help you
+                            finance your project and equally deliver them at your doorstep.</p>
+                        </div>
+                        <button class="accordion">What is
+                          Providum interest rate for project financing?</button>
+                        <div class="panel">
+                          <p>We a competitive rate when compared to financial institutions in Nigeria. The value we
+                            provide is peace of mind. We understand your request is not a loan it is a project
+                            financing. So, our terms, target and focus are based on project delivery.</p>
+                        </div>
+                        
+                       
+                      <a class="btn btn-sm btn-primary btn-bg-purple my-4 me-2 justify-content-sm-start"
+                        href="https://docs.google.com/forms/d/1neG7rWgL-xdVi9ZBpGgOFhcdO0t15IMScI6HzYhGJoQ" target="_blank"
+                        role="button"> Get started</a><a class="btn btn-sm my-2 btn-default" href="faq.html" role="button">Frequently asked questions<i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                  </div>
                 </div>
-            </div>
-            <!-- end of .container-->
-
-        </section>
+                <!-- end of .container-->
+          
+              </section>
         <!-- <section> close ============================-->
         <!-- ============================================-->
 
@@ -623,6 +639,22 @@
 
 
     </script>
+      <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+              panel.style.display = "none";
+            } else {
+              panel.style.display = "block";
+            }
+          });
+        }
+        </script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="vendors/popper/popper.min.js"></script>
     <script src="vendors/bootstrap/bootstrap.min.js"></script>
