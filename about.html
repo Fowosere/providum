@@ -40,87 +40,66 @@
 
   <link href="assets/css/user.css" rel="stylesheet" />
 
+ <style>
+   
 
-  <style>
-    .get-in-touch {
-      max-width: 800px;
-      /* margin: 50px auto; */
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(calc(-250px * 7));
+      }
+    }
+
+    .slider {
+      background: white;
+      box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+      height: 100px;
+      margin: auto;
+      overflow: hidden;
       position: relative;
-
+      width: 75%;
     }
 
-    .get-in-touch .title {
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: 3.2em;
-      line-height: 48px;
-      padding-bottom: 48px;
-
-      -webkit-background-clip: text !important;
-      -webkit-text-fill-color: transparent !important;
-    }
-
-    .contact-form .form-field {
-      position: relative;
-      margin: 32px 0;
-    }
-
-    .contact-form .input-text {
-      display: block;
-      width: 100%;
-      height: 36px;
-      border-width: 0 0 2px 0;
-
-      font-size: 18px;
-      line-height: 26px;
-      font-weight: 400;
-    }
-
-    .contact-form .input-text:focus {
-      outline: none;
-    }
-
-    .contact-form .input-text:focus+.label,
-    .contact-form .input-text.not-empty+.label {
-      -webkit-transform: translateY(-24px);
-      transform: translateY(-24px);
-    }
-
-    .contact-form .label {
+    .slider::before,
+    .slider::after {
+      background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+      content: "";
+      height: 100px;
       position: absolute;
-      left: 20px;
-      bottom: 11px;
-      font-size: 18px;
-      line-height: 26px;
-      font-weight: 400;
-
-      cursor: text;
-      transition: -webkit-transform .2s ease-in-out;
-      transition: transform .2s ease-in-out;
-      transition: transform .2s ease-in-out,
-        -webkit-transform .2s ease-in-out;
-    }
-
-    .contact-form .submit-btn {
-      display: inline-block;
-      background-color: #000;
-      /* background-image: linear-gradient(125deg, #a72879, #064497); */
-      color: #fff;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 16px;
-      padding: 8px 16px;
-      border: none;
       width: 200px;
-      cursor: pointer;
+      z-index: 2;
     }
-  </style>
+
+    .slider::after {
+      right: 0;
+      top: 0;
+      transform: rotateZ(180deg);
+    }
+
+    .slider::before {
+      left: 0;
+      top: 0;
+    }
+
+    .slider .slide-track {
+      animation: scroll 40s linear infinite;
+      display: flex;
+      width: calc(250px * 14);
+    }
+
+    .slider .slide {
+      height: 100px;
+      width: 250px;
+    }
+  </style> 
 
 </head>
 
 
-<body>
+<body style="background-color: whitesmoke;">
 
   <!-- ===============================================-->
   <!--    Main Content-->
@@ -148,7 +127,7 @@
                     <a class="dropdown-item" href="project.html">Project Financing </a>
 
                     <a class="dropdown-item" href="logistics.html">Logistics</a>
-    
+
                   </div>
                 </div>
               </div>
@@ -162,20 +141,20 @@
                 aria-expanded="false">Who We Serve</a>
 
 
-                <div class="dropdown-menu p-4" aria-labelledby="dropdown05">
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div>
-  
-                      </div>
-                      <a class="dropdown-item" href="serve-ip.html">IP Security Industry</a>
-                      <a class="dropdown-item" href="serve.html">IT & Telecoms Industry</a>
-  
-                      <a class="dropdown-item" href="serve.html">End-users</a>
-  
+              <div class="dropdown-menu p-4" aria-labelledby="dropdown05">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div>
+
                     </div>
+                    <a class="dropdown-item" href="serve-ip.html">IP Security Industry</a>
+                    <a class="dropdown-item" href="serve.html">IT & Telecoms Industry</a>
+
+                    <a class="dropdown-item" href="serve.html">End-users</a>
+
                   </div>
                 </div>
+              </div>
 
             </li>
             <li class="nav-item dropdown"> <a class="nav-link active" href="#" id="dropdown05" data-toggle="dropdown"
@@ -215,7 +194,7 @@
             <a class="btn btn-sm btn-primary btn-bg-purple my-4 ms-2  justify-content-sm-center"
               href="construction.html" role="button"
               style="background-color: white;color: #EB3128;border: white;  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);">Shop</a>
-          </div>F
+          </div>
 
         </div>
       </div>
@@ -224,16 +203,15 @@
 
 
 
-
-    <section class="py-7 py-lg-10" id="home">
+    <section class="" id="home">
       <div class="bg-holder bg-size"
         style="background-image:url(assets/img/illustration/2.png);background-position:left top;background-size:contain;">
       </div>
       <!--/.bg-holder-->
 
-      <!-- <div class="bg-holder d-none d-xxl-block hero-bg"
-                style="background-image:url(assets/img/illustration/Teal\ Illustration\ Digital\ Business\ Blog\ Banner\ \(5\).png);background-position:right top;background-size:contain;">
-            </div> -->
+      <div class="bg-holder d-none d-xxl-block hero-bg"
+        style="background-image:url(assets/img/illustration/Group-pana.png);background-position:right top;background-size:contain;">
+      </div>
       <!--/.bg-holder-->
 
       <div class="container">
@@ -243,36 +221,80 @@
               About Us</h1>
             <!-- <p class="fs-1" data-zanim-xs='{"delay":0.5}' data-zanim-trigger="scroll"></p> -->
             <!-- <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-center mt-5"
-                            data-zanim-xs='{"delay":0.5}' data-zanim-trigger="scroll">
-                            <a class="btn  btn-primary me-1" href="#!" role="button">Get A Quote</a>
-                        </div> -->
+                      data-zanim-xs='{"delay":0.5}' data-zanim-trigger="scroll">
+                      <a class="btn  btn-primary me-1" href="#!" role="button">Get A Quote</a>
+                  </div> -->
           </div>
         </div>
       </div>
     </section>
 
+    <!-- 
+
+    <div class="container">
+
+      <div class="w-100 h-100 p-5 services-card-shadow p-md-5 bg-white rounded-4">
+
+     
+      </div>
 
 
-
-
-    <section id="procurement">
-
-
-      <!-- end of .container-->
-
-    </section>
-
-
-
-
-
-
+    </div> -->
 
 
 
 
 
 
+    <div class="container">
+      <div class="row mt-3">
+
+       
+        <div class="col-md-12">
+          <div class="w-100 h-100 p-5 services-card-shadow p-md-5  bg-white rounded-4">
+
+            <div class="row">
+
+              <div class="col-md-12">
+                <p class="fs-0">
+
+                  Providum Ltd is a supplier/distributor of IT & IP security products. We offer products and services
+                  that are
+                  dedicated to supporting system integrators in achieving success in their respective project.
+                  Honored on multiple occasions, our partners success in projects is a testament of our team’s
+                  commitment to
+                  hard
+                  work, innovative services and operational efficiency.
+                  We operate in 4 major domains of services.
+                </p>
+                <ol class="fs-0 text-justify">
+                  <li> Distribution</li>
+                  <li> Sourcing & procurement services</li>
+                  <li> Project Financing</li>
+                  <li>Logistics</li>
+                </ol>
+
+                <p class="fs-0 text-justify">
+                  PROVIDUM <i> have the most referenced success stories in the IT and physical security industry. 20
+                    years
+                    combined
+                    experience in the industry is setting the pace for system integrators to achieve more.</i>
+                  <br> Furthermore, we pride ourselves on having experienced & highly trained staff that could react
+                  quickly to
+                  the
+                  demands of our customers.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+    
+      </div>
+
+    </div>
 
 
 
@@ -284,6 +306,79 @@
 
 
 
+    <div class="container">
+
+
+
+
+      <div class="row mt-5">
+
+      
+        <div class="col-md-12">
+          <div class="w-100 h-auto p-5 services-card-shadow p-md-5  bg-white rounded-4">
+
+            <div class="row">
+              <div class="col-md-6">
+                <h1 class="fs-2 fw-normal mt-6"> <b>Vision.</b></h1>
+                <p class="fs-0">
+
+                  Creating values for project success.
+
+
+
+                </p>
+
+
+
+
+              </div>
+              <div class="col-md-6 ">
+                <img class="img-fluid   float-lg-none" src="assets/img/illustration/Finance leaders-pana.png" alt="..." />
+
+              </div>
+
+
+            </div>
+
+          </div>
+        </div>
+  
+      </div>
+
+    </div>
+
+
+    <div class="container">
+      <div class="row mt-5">
+
+       
+        <div class="col-md-12">
+          <div class="w-100 h-auto p-5 services-card-shadow p-md-5  bg-white rounded-4">
+
+            <div class="row">
+
+              <div class="col-md-6 ">
+                <img class="w-75 float-lg-none h-75" src="assets/img/illustration/Finance leaders-pana.png" alt="..." />
+
+              </div>
+
+              <div class="col-md-6">
+                <h1 class="fs-2 fw-normal mt-6"> <b>Our Mission.</b></h1>
+                <p class="fs-0">
+
+                  To strengthen Africa system integrator by simplifying procurement, financing and logistics.
+                </p>
+
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+     
+      </div>
+
+    </div>
 
 
 
@@ -291,9 +386,113 @@
 
 
 
+    <div class="container">
 
 
 
+
+      <div class="row mt-5">
+
+  
+        <div class="col-md-12">
+          <div class="w-100 h-auto p-5 services-card-shadow p-md-5  bg-white rounded-4">
+
+            <div class="row">
+              <div class="col-md-6">
+                <h1 class="fs-2 fw-normal mt-"> <b>Core Values</b></h1>
+                <br>
+                <ol class="" style="list-style: square;">
+
+
+                  <li>To ensure a better experience in projects. </li>
+                  <li>Optimize projects deliverables for efficiency and profitability</li>
+                  <li>Customer-centric services</li>
+                  <li>Employee training and improvement</li>
+                  <li>Highest standard of professionalism</li>
+
+
+                </ol>
+
+
+
+
+
+              </div>
+              <div class="col-md-6 mt-2 ">
+                <img class="w-75 float-lg-none h-75" src="assets/img/illustration/Finance leaders-pana.png" alt="..." />
+
+              </div>
+
+
+            </div>
+
+          </div>
+        </div>
+     
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+    <h1 class="fs-2 fw-normal mt-5 text-center"> <b>Partners</b></h1>
+
+
+
+    <Br></Br>
+
+
+
+    <div class="slider">
+      <div class="slide-track">
+        <div class="slide">
+          <img src="assets/img/partners/axis.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="assets/img/partners/bosche.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="assets/img/partners/cisco.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="assets/img/partners/genetec.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="assets/img/partners/milestone.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="assets/img/partners/motorola.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="assets/img/partners/pelco.jpg" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="assets/img/partners/axis.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="assets/img/partners/bosche.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="assets/img/partners/cisco.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="assets/img/partners/genetec.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="assets/img/partners/milestone.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="assets/img/partners/motorola.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="assets/img/partners/pelco.jpg" height="100" width="250" alt="" />
+        </div>
+      </div>
+    </div>
 
 
 
@@ -318,7 +517,7 @@
             <h4 class="fs-3 fw-normal" data-zanim-xs='{"delay":0.3}' data-zanim-trigger="scroll">FREQUENTLY ASKED
               QUESTIONS
             </h4>
-          
+
             <button class="accordion">What is
               Providum?</button>
             <div class="panel">
@@ -527,12 +726,12 @@
         <div class="row py-7">
           <div class="col-12 col-sm-12 col-lg-6 mb-4 order-0 order-sm-0"><a class="text-decoration-none" href="#"><img
                 src="assets/img/icons/logo.png" height="51" alt="" /></a>
-                <p class=" mt-4 mb-0">Sales</p>
-                <p class="text-light  mb-0"> <i class="fas fa-mobile me-1"></i>+2347064004197</p>
-                <p class="text-light  mb-0">   <i class="fas fa-at me-1"></i>sales@providumltd.com</p>
-                <p class="mt-2 mb-0">Coperate</p>
-                <p class="text-light mb-0">  <i class="fas fa-mobile me-1"></i>+2347064004187</p>
-                <p class="text-light mb-4">    <i class="fas fa-at me-1"></i>info@providumltd.com</p>
+            <p class=" mt-4 mb-0">Sales</p>
+            <p class="text-light  mb-0"> <i class="fas fa-mobile me-1"></i>+2347064004197</p>
+            <p class="text-light  mb-0"> <i class="fas fa-at me-1"></i>sales@providumltd.com</p>
+            <p class="mt-2 mb-0">Coperate</p>
+            <p class="text-light mb-0"> <i class="fas fa-mobile me-1"></i>+2347064004187</p>
+            <p class="text-light mb-4"> <i class="fas fa-at me-1"></i>info@providumltd.com</p>
             <div class="d-flex"><a href="#!"><img class="me-xl-3 me-1" src="assets/img/gallery/linkedin-line1.svg"
                   alt="in" width:'20px'="width:'20px'" height:'20px'="height:'20px'" /></a><a href="#!"><img
                   class="me-xl-3 me-1" src="assets/img/gallery/facebook-line1.svg" alt="fb" width:'20px'="width:'20px'"
@@ -553,14 +752,15 @@
               <li class="lh-lg"><a class="text-500 footer-link text-light" href="#!">Invoice Financing</a>
               </li>
               <li class="lh-lg"><a class="text-500 footer-link text-light" href="#!">Logistics</a></li>
-     
-           
+
+
             </ul>
           </div>
           <div class="col-md-6 col-sm-4 col-lg-2 mb-3 order-3 order-sm-2">
             <h5 class="lh-lg fw-bold text-light font-sans-serif">Who We Serve</h5>
             <ul class="list-unstyled text-light mb-md-4 mb-lg-0">
-              <li class="lh-lg"><a class="text-500 footer-link text-light" href="serve-ip.html">IP Security Industry </a>
+              <li class="lh-lg"><a class="text-500 footer-link text-light" href="serve-ip.html">IP Security Industry
+                </a>
               </li>
               <li class="lh-lg"><a class="text-500 footer-link text-light" href="serve.html">IT & Telecoms Industry.</a>
               </li>
