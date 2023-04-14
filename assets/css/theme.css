@@ -22123,3 +22123,33 @@ iframe.yt-video.loaded {
   transform: scale(1.2);
   transition: 1s ease;
   }
+
+  .special:hover {
+    -webkit-transform: scale(1.0);
+    -ms-transform: scale(1.0);
+    transform: scale(1.1);
+    transition: 1s ease;
+   
+
+   
+  }
+
+
+  .check:hover + .readmore{
+    border: 1px solid #4A5F98 ;
+    border-radius: 10px;
+    color:   white;
+    background-color: #4A5F98;
+
+  }
+
+  .readmore:hover {
+    border: 1px solid #4A5F98 ;
+    border-radius: 10px;
+    color:   white;
+    background-color: #4A5F98;
+
+
+  }
+
+
