@@ -348,7 +348,7 @@ var utils = {
 
 var detectorInit = function detectorInit() {
   var _window = window,
-      is = _window.is;
+    is = _window.is;
   var html = document.querySelector('html');
   is.opera() && addClass(html, 'opera');
   is.mobile() && addClass(html, 'mobile');
@@ -489,7 +489,7 @@ var navbarInit = function navbarInit() {
     var colorRgb = utils.hexToRgb(color);
 
     var _window$getComputedSt = window.getComputedStyle(navbar),
-        backgroundImage = _window$getComputedSt.backgroundImage;
+      backgroundImage = _window$getComputedSt.backgroundImage;
 
     var transition = 'background-color 0.35s ease';
     navbar.style.backgroundImage = 'none'; // Change navbar background color on scroll
@@ -905,3 +905,5 @@ docReady(navbarInit);
 docReady(detectorInit);
 docReady(zanimationInit);
 //# sourceMappingURL=theme.js.map
+
+

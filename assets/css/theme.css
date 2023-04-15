@@ -22124,7 +22124,7 @@ iframe.yt-video.loaded {
   transition: 1s ease;
   }
 
-  .special:hover {
+  .special:hover{
     -webkit-transform: scale(1.0);
     -ms-transform: scale(1.0);
     transform: scale(1.1);
@@ -22135,7 +22135,7 @@ iframe.yt-video.loaded {
   }
 
 
-  .check:hover + .readmore{
+  .readmoreh {
     border: 1px solid #4A5F98 ;
     border-radius: 10px;
     color:   white;
@@ -22152,4 +22152,6 @@ iframe.yt-video.loaded {
 
   }
 
+
+  
 
