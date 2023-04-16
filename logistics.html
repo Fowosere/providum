@@ -170,9 +170,9 @@
 
                     </div>
                     <a class="dropdown-item" href="serve-ip.html">IP Security Industry</a>
-                    <a class="dropdown-item" href="serve.html">IT & Telecoms Industry</a>
+                    <a class="dropdown-item" href="serve-ip.html">IT & Telecoms Industry</a>
 
-                    <a class="dropdown-item" href="serve.html">End-users</a>
+                    <a class="dropdown-item" href="serve-ip.html">End-users</a>
 
                   </div>
                 </div>
@@ -188,8 +188,8 @@
                   <div class="col-md-12 fs-0">
 
                     <a class="dropdown-item" href="about.html">About us</a>
-                    <a class="dropdown-item" href="#">Partners</a>
-                    <a class="dropdown-item" href="#">Company Profile</a>
+                    <a class="dropdown-item" href="about.html#partners">Partners</a>
+                    <a class="dropdown-item" href="about.html#profile">Company Profile</a>
                   </div>
                 </div>
               </div>
@@ -349,7 +349,7 @@
 
 
         <div class="col-md-12">
-          <div class="w-100 h-100 p-5 services-card-shadow  p-md-5 bg-white rounded-4">
+          <div class="w-100 h-100 p-5 services-card-shadow  p-md-5 bg-white rounded-4 check2" id="check2">
 
             <div class="row">
               <div class="col-md-6 ">
@@ -366,7 +366,7 @@
 
 
                 </p>
-                <a class="btn btn-sm readmore btn-default" href="#" role="button" style="float:left;">Talk to
+                <a class="btn btn-sm readmore btn-default" href="#" role="button" id="button2" style="float:left;">Talk to
                   Experts<i class="fas fa-arrow-right ms-2"></i></a>
 
               </div>
@@ -646,10 +646,10 @@
               <li class="lh-lg"><a class="text-500 footer-link text-light" href="serve-ip.html">IP Security Industry
                 </a>
               </li>
-              <li class="lh-lg"><a class="text-500 footer-link text-light" href="serve.html">IT & Telecoms Industry.</a>
+              <li class="lh-lg"><a class="text-500 footer-link text-light" href="serve-ip.html">IT & Telecoms Industry.</a>
               </li>
               <!-- <li class="lh-lg"><a class="text-500 footer-link text-light" href="serve.html">MEP Consultant</a></li> -->
-              <li class="lh-lg"><a class="text-500 footer-link text-light" href="serve.html">End-users</a></li>
+              <li class="lh-lg"><a class="text-500 footer-link text-light" href="serve-ip.html">End-users</a></li>
             </ul>
           </div>
           <div class="col-md-6 col-sm-4 col-lg-2 mb-3 order-3 order-sm-2">
@@ -744,13 +744,24 @@
     };
 
 
-    document.getElementById('check1').addEventListener("mouseover", shout, true);
-    document.getElementById("check1").addEventListener("mouseout", deshout, true);
-    function shout() {
+    document.getElementById("check1").addEventListener("mouseover", shout1, true);
+    document.getElementById("check1").addEventListener("mouseout", deshout1, true);
+    function shout1() {
       document.getElementById("button1").classList.add("readmoreh");
     }
-    function deshout() {
+    function deshout1() {
       document.getElementById("button1").classList.remove("readmoreh");
+    } ;
+
+
+
+    document.getElementById("check2").addEventListener("mouseover", shout2, true);
+    document.getElementById("check2").addEventListener("mouseout", deshout2, true);
+    function shout2() {
+      document.getElementById("button2").classList.add("readmoreh");
+    }
+    function deshout2() {
+      document.getElementById("button2").classList.remove("readmoreh");
     } ;
 
 

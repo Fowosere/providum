@@ -120,7 +120,7 @@
 </head>
 
 
-<body>
+<body style="background-color: whitesmoke;">
 
     <!-- ===============================================-->
     <!--    Main Content-->
@@ -171,9 +171,9 @@
 
                                         </div>
                                         <a class="dropdown-item" href="serve-ip.html">IP Security Industry</a>
-                                        <a class="dropdown-item" href="serve.html">IT & Telecoms Industry</a>
+                                        <a class="dropdown-item" href="serve-ip.html">IT & Telecoms Industry</a>
 
-                                        <a class="dropdown-item" href="serve.html">End-users</a>
+                                        <a class="dropdown-item" href="serve-ip.html">End-users</a>
 
                                     </div>
                                 </div>
@@ -189,8 +189,8 @@
                                     <div class="col-md-12 fs-0">
 
                                         <a class="dropdown-item" href="about.html">About us</a>
-                                        <a class="dropdown-item" href="#">Partners</a>
-                                        <a class="dropdown-item" href="#">Company Profile</a>
+                                        <a class="dropdown-item" href="about.html#partners">Partners</a>
+                                        <a class="dropdown-item" href="about.html#profile">Company Profile</a>
                                     </div>
                                 </div>
                             </div>
@@ -243,7 +243,7 @@
                 <div class="row align-items-center h-100 justify-content-center justify-content-lg-center">
                     <div class="col-md-9 col-xxl-12 text-md-center text-center py-6 pt-8">
                         <h1 class="fs-4 fs-md-5 fs-xxl-12" data-zanim-xs='{"delay":0.3}' data-zanim-trigger="scroll">
-                            WHO WE SERVE - IP Security Industry</h1>
+                            WHO WE SERVE</h1>
                         <!-- <p class="fs-1" data-zanim-xs='{"delay":0.5}' data-zanim-trigger="scroll"></p> -->
                         <!-- <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-center mt-5"
                             data-zanim-xs='{"delay":0.5}' data-zanim-trigger="scroll">
@@ -261,7 +261,7 @@
 
    
                 <div class="col-md-12">
-                    <div class="w-100 h-100 p-5 services-card-shadow bg-white p-md-5 rounded-4 ">
+                    <div class="w-100 h-100 p-5 services-card-shadow bg-white p-md-5 rounded-4 check ">
 
                         <div class="row">
 
@@ -320,7 +320,7 @@
 
       
                 <div class="col-md-12">
-                    <div class="w-100 h-100 p-5 services-card-shadow p-md-5  bg-white rounded-4 ">
+                    <div class="w-100 h-100 p-5 services-card-shadow p-md-5  bg-white rounded-4 check ">
 
                         <div class="row">
                             <div class="col-md-6 ">
@@ -369,7 +369,7 @@
 
            
                 <div class="col-md-12">
-                    <div class="w-100 h-100 p-5 services-card-shadow p-md-5 bg-white rounded-4">
+                    <div class="w-100 h-100 p-5 services-card-shadow p-md-5 bg-white rounded-4 check">
 
                         <div class="row">
                             <div class="col-md-6">
@@ -420,7 +420,7 @@
             <div class="row mt-5">
 
                 <div class="col-md-12">
-                    <div class="w-100 h-100 p-5 services-card-shadow p-md-5 bg-white rounded-4">
+                    <div class="w-100 h-100 p-5 services-card-shadow p-md-5 bg-white rounded-4 check">
 
                         <div class="row">
                             <div class="col-md-6 ">
@@ -715,10 +715,10 @@
                     <li class="lh-lg"><a class="text-500 footer-link text-light" href="serve-ip.html">IP Security Industry
                       </a>
                     </li>
-                    <li class="lh-lg"><a class="text-500 footer-link text-light" href="serve.html">IT & Telecoms Industry.</a>
+                    <li class="lh-lg"><a class="text-500 footer-link text-light" href="serve-ip.html">IT & Telecoms Industry.</a>
                     </li>
                     <!-- <li class="lh-lg"><a class="text-500 footer-link text-light" href="serve.html">MEP Consultant</a></li> -->
-                    <li class="lh-lg"><a class="text-500 footer-link text-light" href="serve.html">End-users</a></li>
+                    <li class="lh-lg"><a class="text-500 footer-link text-light" href="serve-ip.html">End-users</a></li>
                   </ul>
                 </div>
                 <div class="col-md-6 col-sm-4 col-lg-2 mb-3 order-3 order-sm-2">
@@ -799,6 +799,39 @@
                 }
             });
         }
+    </script>
+       <script type="text/javascript">
+
+        // Get all the divs with class 'myDiv'
+        var divs = document.querySelectorAll('.check');
+
+        // Loop through each div
+        divs.forEach(function (div) {
+            // Add a mouseover event listener to each div
+            div.addEventListener('mouseover', function (event) {
+                // Get all the buttons within the hovered div
+                var buttons = event.target.querySelectorAll('.readmore');
+                // Loop through each button and add the 'hovered' class
+                buttons.forEach(function (button) {
+                    button.classList.add('readmoreh');
+                });
+            });
+
+            // Add a mouseout event listener to each div
+            div.addEventListener('mouseout', function (event) {
+                // Get all the buttons within the hovered div
+                var buttons = event.target.querySelectorAll('.readmore');
+                // Loop through each button and remove the 'hovered' class
+                buttons.forEach(function (button) {
+                    button.classList.remove('readmoreh');
+                });
+            });
+        });
+
+
+
+
+
     </script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="vendors/popper/popper.min.js"></script>
