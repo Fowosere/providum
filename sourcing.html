@@ -373,7 +373,7 @@
 
                             </div>
                             <div class="col-md-6 ">
-                                <img class="w-75 float-lg-end" src="assets/img/illustration/Dropshipping model-pana.png"
+                                <img class="w-75 float-lg-end special" src="assets/img/illustration/Dropshipping model-pana.png"
                                     alt="..." />
 
                             </div>
@@ -412,7 +412,7 @@
 
                         <div class="row">
                             <div class="col-md-6 ">
-                                <img class="w-75 float-lg-none" src="assets/img/illustration/Finance leaders-pana.png"
+                                <img class="w-75 float-lg-none special" src="assets/img/illustration/Finance leaders-pana.png"
                                     alt="..." />
 
                             </div>
@@ -474,7 +474,7 @@
 
             <div class="row mt-5">
 
-                >
+                
                 <div class="col-md-12">
                     <div class="w-100 h-100 p-5 services-card-shadow p-md-5 bg-white rounded-4 check">
 
@@ -495,7 +495,7 @@
 
                             </div>
                             <div class="col-md-6 ">
-                                <img class="w-75 float-lg-none"
+                                <img class="w-75 float-lg-none special"
                                     src="assets/img/illustration/Software code testing-pana.png" alt="..." />
 
                             </div>
@@ -1020,9 +1020,14 @@
             div.addEventListener('mouseover', function (event) {
                 // Get all the buttons within the hovered div
                 var buttons = event.target.querySelectorAll('.readmore');
+
+                var images = event.target.querySelectorAll('.special');
                 // Loop through each button and add the 'hovered' class
                 buttons.forEach(function (button) {
                     button.classList.add('readmoreh');
+                });
+                images.forEach(function (image) {
+                    image.classList.add('growimage');
                 });
             });
 
@@ -1031,8 +1036,15 @@
                 // Get all the buttons within the hovered div
                 var buttons = event.target.querySelectorAll('.readmore');
                 // Loop through each button and remove the 'hovered' class
+
+                var images = event.target.querySelectorAll('.special');
+
                 buttons.forEach(function (button) {
                     button.classList.remove('readmoreh');
+                });
+
+                images.forEach(function (image) {
+                    image.classList.remove('growimage');
                 });
             });
         });
