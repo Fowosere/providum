@@ -23215,6 +23215,27 @@ iframe.yt-video.loaded {
 
 }
 
+
+
+.readmorey {
+  border: 1px solid #4A5F98;
+  border-radius: 10px;
+  color: white;
+  background-color: #4A5F98;
+
+
+}
+
+.readmorey:hover {
+  border: 1px solid #FECB00;
+  border-radius: 10px;
+  color: white;
+  background-color: #FECB00;
+
+
+}
+
+
 .readmore {
   border: 1px solid #4A5F98;
   border-radius: 10px;
