@@ -6142,6 +6142,7 @@ fieldset:disabled .btn {
   display: inline-block;
   width: 1.5em;
   height: 1.5em;
+  
   vertical-align: middle;
   background-repeat: no-repeat;
   background-position: center;
